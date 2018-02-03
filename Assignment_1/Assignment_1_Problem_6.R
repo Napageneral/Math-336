@@ -9,7 +9,8 @@ YearVsAnnual_Anomaly = mydata[,c(1,2)]
 plot(YearVsAnnual_Anomaly,type="o", xlab = "Year", ylab = "Annual Temperature Anomaly")
 
 #Linear Regressions in order (i),(ii),(iii),(iv),(v)
-ablinepiece(lm(Annual_Anomaly ~ year), lwd=2.0, col = "yellow")
+clip(0,5,0,10)
+abline(lm(Annual_Anomaly ~ year), lwd=2.0, col = "yellow")
 legend(1880,.9, col=c("yellow"), lty = 1,lwd=2.0, legend=c("1880-2014"), bty="n", text.font=2, cex=1)
 abline(lm(Annual_Anomaly[1:31] ~ year[1:31]),lwd=2.0, col = "blue")
 legend(1880,.8, col=c("blue"), lty = 1,lwd=2.0, legend=c("1880-1910"), bty="n", text.font=2, cex=1)
