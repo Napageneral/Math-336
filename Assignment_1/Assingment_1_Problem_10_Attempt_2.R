@@ -1,5 +1,5 @@
 library(readr)
-mydata <- read_csv("C:/Users/Tyler/Desktop/Math-336/R-Datasets/tabula-SDSUweather-Jan-2017.csv")
+mydata <- read_csv("tabula-SDSUweather-Jan-2017.csv")
 day = mydata[,3]
 day=lapply(day,as.numeric)
 tmax = mydata[,4]
